@@ -1,0 +1,72 @@
+@font-face {
+  font-family: "Courgette";
+  src: url("../styles/font/courgette-regular-webfont.woff2") format("woff2"),
+    url("../styles/font/courgette-regular-webfont.woff") format("woff");
+}
+
+body {
+  background-image: url("../images/fondo.jpg");
+  color: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100vh;
+}
+
+.formulario {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+  color: #fff;
+  width: 400px;
+}
+
+.formulario h1 {
+  font-size: 70px;
+  font-family: "Courgette", sans-serif;
+  font-style: unset;
+}
+
+.formulario h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-family: "Courgette", sans-serif;
+}
+
+.formulario input {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.formulario button {
+  width: 100%;
+  padding: 15px;
+  background-color: rgba(52, 152, 219, 0.5);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.formulario button.olvidar {
+  background-color: rgba(52, 152, 219, 0.5);
+  margin-top: 15px;
+}
+
+.formulario button:hover,
+.formulario button.olvidar:hover {
+  background-color: rgba(
+    52,
+    152,
+    219,
+    1
+  ); /* Cambia la opacidad al 100% al pasar el ratón sobre el botón */
+}

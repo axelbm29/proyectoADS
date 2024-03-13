@@ -24,7 +24,7 @@ class screenMensajeSistema extends formulario
                     <div class="modal-header">
                         <div class="icon-box">
                         </div>
-                        <h4 class="modal-title w-100">¡Lo siento!</h4>
+                        <h4 class="modal-title w-100">Mensaje del Sistema</h4>
                     </div>
                     <div class="modal-body">
                         <p class="text-center"> <?php echo strtoupper($mensaje) ?> </p>

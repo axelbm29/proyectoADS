@@ -1,7 +1,7 @@
 <?
     class controlAlumno
     {
-        public function verificarAlumno($docIdentidad,$inputNivel,$id)
+        public function verificarAlumno($docIdentidad,$inputNivel,$id,$hora,$inputHorario)
         {
             session_start();
             include_once("../modelos/alumnos.php");
@@ -9,21 +9,35 @@
             $respuesta = $objUsuario -> validarAlumnos($docIdentidad);
             if(count($respuesta)>0)
             {
-                //  include_once('C:/AppServ/www/proyectoADS/moduloSeguridad/formAutenticarUsuario.php');    
-                // $objetoFormAutenticar = new formAutenticarUsuario();
-                // $objetoFormAutenticar -> formAutenticarUsuarioShow();
-          
-                // include_once('../compartido/screenMensajeSistema.php');
-                // $objMensaje = new screenMensajeSistema();
-                // $objMensaje -> screenMensajeSistemaShow($mensaje,'../index.php');                
+                include_once("./formRegistroAlumno.php");
+                $objUsuarioPriv = new formRegistroAlumno();
+                $objUsuarioPriv -> formUpdateAlumnoPagoShow($respuesta,$inputNivel,$id,$hora,$inputHorario);            
             }
             else
             {   
                 include_once("./formRegistroAlumno.php");
                 $objUsuarioPriv = new formRegistroAlumno();
-                $objUsuarioPriv -> formRegistroAlumnoPago($docIdentidad,$inputNivel,$id);
+                $objUsuarioPriv -> formRegistroAlumnoPagoShow($docIdentidad,$inputNivel,$id,$hora,$inputHorario);
               
             }
+        }
+
+        public function agregarAlumno($nivel, $correo, $celular, $nombreCompleto, $documentoIdentidad, $idHorario, $cumpleanos)
+        {
+            session_start();
+            include_once("../modelos/alumnos.php");
+            $objUsuario = new alumnos();
+            $respuesta = $objUsuario -> insertarAlumno($nombreCompleto, $documentoIdentidad, $celular, $correo, $cumpleanos, $nivel, $idHorario);
+            return $respuesta;
+        }
+
+        public function actualizarAlumno($nombreCompleto, $documentoIdentidad, $celular, $correo, $cumpleanos, $nivel,$idHorario)
+        {
+            session_start();
+            include_once("../modelos/alumnos.php");
+            $objUsuario = new alumnos();
+            $respuesta = $objUsuario -> actualizarAlumno($nombreCompleto, $documentoIdentidad, $celular, $correo, $cumpleanos, $nivel,$idHorario);
+            return $respuesta;
         }
     }
 ?>

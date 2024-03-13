@@ -9,7 +9,6 @@ class panelBienvenida extends formulario
         session_start();
 
         ?>
-
         <?php
           
         include_once("C:/AppServ/www/proyectoADS/compartido/indexGeneral.php");

@@ -21,6 +21,19 @@ class alumnos extends conexion
         }
     }
 
+    public function insertarAlumno($nombre, $dni, $celular, $correo, $cumpleanos, $nivelBaile, $idHorario)
+    {
+        $this->conectar();
+
+        $SQL = "INSERT INTO alumno (nombre_completo, dni, celular, correo, cumpleanos, nivel_baile, id_horario)
+                    VALUES ('$nombre', '$dni', '$celular', '$correo', '$cumpleanos', '$nivelBaile', '$idHorario')";
+
+        $resultado = mysql_query($SQL);
+
+        $this->desConectar();
+
+        return $resultado;
+    }
 
 
     public function buscarAlumnos()

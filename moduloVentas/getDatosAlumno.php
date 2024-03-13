@@ -62,7 +62,7 @@ if (validarBoton("btnRegistrar")) {
             // inserta
             include_once("./controlAlumno.php");
             $objControlAlumno = new controlAlumno();
-            $response = $objControlAlumno->agregarAlumno($nivel, $correo, $celular, $nombreCompleto, $documentoIdentidad, $idHorario, $cumpleanos);
+            $response = $objControlAlumno->agregarAlumno($nivel, $correo, $celular, $nombreCompleto, $documentoIdentidad, $idHorario, $cumpleanos,$cantidadMeses);
             if ($response != 1) {
                 include_once('C:/AppServ/www/proyectoADS/moduloVentas/formRegistroAlumno.php');
                 $objetoFormRegistroAlumno = new formRegistroAlumno();

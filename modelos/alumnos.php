@@ -21,12 +21,17 @@ class alumnos extends conexion
         }
     }
 
-    public function insertarAlumno($nombre, $dni, $celular, $correo, $cumpleanos, $nivelBaile, $idHorario)
+    public function insertarAlumno($nombre, $dni, $celular, $correo, $cumpleanos, $nivelBaile, $idHorario, $cantidadMeses)
     {
         $this->conectar();
 
-        $SQL = "INSERT INTO alumno (nombre_completo, dni, celular, correo, cumpleanos, nivel_baile, id_horario)
-                    VALUES ('$nombre', '$dni', '$celular', '$correo', '$cumpleanos', '$nivelBaile', '$idHorario')";
+        $fechaInicio = date('Y-m-d');
+        $fechaFin = date('Y-m-d', strtotime($fechaInicio . ' + ' . $cantidadMeses . ' months'));
+        $horasConsumidas = 0;
+        $horasPendientes = 8 * $cantidadMeses;
+
+        $SQL = "INSERT INTO alumno (nombre_completo, dni, celular, correo, cumpleanos, nivel_baile, id_horario, fecha_inicio, fecha_fin, horas_consumidas, horas_pendientes)
+                    VALUES ('$nombre', '$dni', '$celular', '$correo', '$cumpleanos', '$nivelBaile', '$idHorario', '$fechaInicio', '$fechaFin', '$horasConsumidas', '$horasPendientes')";
 
         $resultado = mysql_query($SQL);
 
@@ -34,6 +39,7 @@ class alumnos extends conexion
 
         return $resultado;
     }
+
 
 
     public function buscarAlumnos()

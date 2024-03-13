@@ -67,7 +67,7 @@ if (validarBoton("btnRegistrar")) {
         if ($actualizacionExitosa) {
             include_once('../compartido/screenMensajeSistema.php');
             $objMensaje = new screenMensajeSistema();
-            $objMensaje->screenMensajeSistemaShow("Asistencia registrada correctamente.", '');
+            $objMensaje->screenMensajeSistemaShow("Asistencia registrada correctamente.", '','',true);
 
             include_once('C:/AppServ/www/proyectoADS/moduloGestionAcademica/formRegistrarAsistencia.php');
             $objetoRegistrarAsistencia = new formRegistrarAsistencia();

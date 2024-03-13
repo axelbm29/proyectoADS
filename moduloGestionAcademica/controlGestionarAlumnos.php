@@ -144,7 +144,7 @@ class controlGestionarAlumnos
 
             include_once('../compartido/screenMensajeSistema.php');
             $objMensaje = new screenMensajeSistema();
-            $objMensaje->screenMensajeSistemaShow("Alumno eliminado exitosamente", '');
+            $objMensaje->screenMensajeSistemaShow("Alumno eliminado exitosamente", '','',true);
         }
     }
 }

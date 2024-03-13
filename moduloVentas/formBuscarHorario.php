@@ -17,7 +17,7 @@ class formBuscarHorario extends panelPrincipalShow
                                 <option value="INTERMEDIO">INTERMEDIO</option>
                                 <option value="AVANZADO">AVANZADO</option>
                             </select>
-                            <button class="btn btn-outline-secondary" type="submit" name="btnBuscarHorario">Button</button>
+                            <button class="btn btn-outline-secondary" type="submit" name="btnBuscarHorario">Escoger</button>
                         </div>
                     </div>
                 </form>

@@ -10,11 +10,11 @@ class tableHorario extends panelPrincipalShow
             $horariosList .= '
                     <tr>
                         <td class="col">' . $horario['dia'] . '</td>
-                        <td class="col-6">' . $horario['hora'] . ':00 PM a ' . ($horario['hora'] + 1) . ':00 PM</td>
+                        <td class="col-6">' . $horario['hora']. '</td>
                         <td class="col-2">
                             <form action="./getHorario.php" method="post">
                                 <input type="hidden" name="horario" value="' . $horario['dia'] . '">
-                                <input type="hidden" name="hora" value="' . $horario['hora'] . ':00 PM a ' . ($horario['hora'] + 1) . ':00 PM">
+                                <input type="hidden" name="hora" value="' . $horario['hora'] . '">
                                 <input type="hidden" name="id" value="' . $horario['id_horario'] . '">
                                 <input type="hidden" name="nivel" value="' . $nivel . '">
                                 <button type="submit" name="btnElegirHorario" class="btn btn-primary w-100" value="' . $horario['dia'] . '-' . $horario['hora'] . '">Elegir Horario</button>

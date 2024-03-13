@@ -19,12 +19,12 @@ class controlAlumno
         }
     }
 
-    public function agregarAlumno($nivel, $correo, $celular, $nombreCompleto, $documentoIdentidad, $idHorario, $cumpleanos)
+    public function agregarAlumno($nivel, $correo, $celular, $nombreCompleto, $documentoIdentidad, $idHorario, $cumpleanos,$cantidadMeses)
     {
         session_start();
         include_once("../modelos/alumnos.php");
         $objUsuario = new alumnos();
-        $respuesta = $objUsuario->insertarAlumno($nombreCompleto, $documentoIdentidad, $celular, $correo, $cumpleanos, $nivel, $idHorario);
+        $respuesta = $objUsuario->insertarAlumno($nombreCompleto, $documentoIdentidad, $celular, $correo, $cumpleanos, $nivel, $idHorario,$cantidadMeses);
         return $respuesta;
     }
 

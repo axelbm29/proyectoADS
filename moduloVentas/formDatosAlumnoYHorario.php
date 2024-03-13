@@ -3,7 +3,7 @@ session_start();
 include_once('C:/AppServ/www/proyectoADS/compartido/panelPrincipalShow.php');
 class formDatosAlumnoYHorario extends panelPrincipalShow
 {
-    public function formDatos($tipoAccion, $title, $inputNivel, $docIdentidad, $hora, $inputHorario, $id, $nombre_completo = "asdsada", $celular = "", $correo = "", $cumple = "")
+    public function formDatos($tipoAccion, $title, $inputNivel, $docIdentidad, $hora, $inputHorario, $id, $nombre_completo = "", $celular = "", $correo = "", $cumple = "")
     {
         $horarioCompleto = $inputHorario . " - " . $hora;
         $this->panelShow('

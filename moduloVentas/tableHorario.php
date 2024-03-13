@@ -1,7 +1,7 @@
 <?
 session_start();
-include_once('C:/AppServ/www/proyectoADS/compartido/indexGeneral.php');
-class tableHorario extends indexGeneral
+include_once('C:/AppServ/www/proyectoADS/compartido/panelPrincipalShow.php');
+class tableHorario extends panelPrincipalShow
 {
     public function formTableHorarioShow($listHorarios, $nivel)
     {
@@ -24,7 +24,7 @@ class tableHorario extends indexGeneral
                 ';
         }
 
-        $this->panelPrincipalShow('
+        $this->panelShow('
                 <div class="welcome-message" style="margin-top: 70px">
                     <h2>Horarios Disponibles</h2>
                     <table class="table w-100">

@@ -73,10 +73,9 @@ class controlGestionarAlumnos
     {
         include_once("../modelos/alumnos.php");
         $objAlumnos = new alumnos();
-        $resultadoActualizacion = $objAlumnos->actualizarAlumno($id_alumno, $nombre_completo, $dni, $nivel_baile, $celular, $correo, $cumpleanos);
+        $resultadoActualizacion = $objAlumnos->actualizarAlumnoPorId($id_alumno, $nombre_completo, $dni, $nivel_baile, $celular, $correo, $cumpleanos);
 
         if ($resultadoActualizacion) {
-            // Actualización exitosa, recargar la lista de alumnos y mostrar el mensaje de éxito
             $listAlumnos = $objAlumnos->buscarAlumnos();
             include_once('C:/AppServ/www/proyectoADS/moduloGestionAcademica/formGestionarAlumnos.php');
             $objetoGestionarAlumnos = new formGestionarAlumnos();
@@ -84,7 +83,7 @@ class controlGestionarAlumnos
 
             include_once('../compartido/screenMensajeSistema.php');
             $objMensaje = new screenMensajeSistema();
-            $objMensaje->screenMensajeSistemaShow("Datos del alumno modificados", '');
+            $objMensaje->screenMensajeSistemaShow("Datos del alumno modificados", '', '', true);
         } else {
             include_once('../compartido/screenMensajeSistema.php');
             $objMensaje = new screenMensajeSistema();

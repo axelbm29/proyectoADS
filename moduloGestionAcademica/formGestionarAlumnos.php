@@ -1,7 +1,7 @@
 <?
 session_start();
-include_once('C:/AppServ/www/proyectoADS/compartido/indexGeneral.php');
-class formGestionarAlumnos extends indexGeneral
+include_once('C:/AppServ/www/proyectoADS/compartido/panelPrincipalShow.php');
+class formGestionarAlumnos extends panelPrincipalShow
 {
     public function formGestionarAlumnosShow($listAlumnos)
     {
@@ -43,7 +43,7 @@ class formGestionarAlumnos extends indexGeneral
                 ';
             }
         }
-        $this->panelPrincipalShow('
+        $this->panelShow('
                 <div class="welcome-message" style="margin-top: 70px">
                     <div class="row">
                         <div class="col-12">

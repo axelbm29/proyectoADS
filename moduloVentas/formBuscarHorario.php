@@ -1,11 +1,11 @@
 <?
 session_start();
-include_once('C:/AppServ/www/proyectoADS/compartido/indexGeneral.php');
-class formBuscarHorario extends indexGeneral
+include_once('C:/AppServ/www/proyectoADS/compartido/panelPrincipalShow.php');
+class formBuscarHorario extends panelPrincipalShow
 {
     public function formBuscarHorarioShow()
     {
-        $this->panelPrincipalShow('
+        $this->panelShow('
                 <form action="./getHorario.php" method="POST">
                     <div class="welcome-message" style="margin-top: 70px">
                         <h2>BUSCAR HORARIO</h2>

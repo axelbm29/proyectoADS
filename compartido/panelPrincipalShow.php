@@ -1,8 +1,8 @@
 <?
 include_once('../compartido/formulario.php');
-class indexGeneral extends formulario
+class panelPrincipalShow extends formulario
 {
-    public function panelPrincipalShow($body, $link = "")
+    public function panelShow($body, $link = "")
     {
         $listaPrivilegios = $_SESSION['listaPrivilegios'];
         $cantidadPrivilegios = count($listaPrivilegios);
@@ -18,14 +18,6 @@ class indexGeneral extends formulario
                 <h1 style="text-align: center">Escuela de Baile Rits</h1>
                 <hr />
                 <ul>
-
-                    <form id="formRegistrarPago" action="../moduloSeguridad/panelBienvenida.php" method="POST">
-                        <li>
-                            <button type="submit" class="link-button active" name="btnIngresar">
-                                <i class="fas fa-home"></i> Inicio
-                            </button>
-                        </li>
-                    </form>
 
                     <?php
                     for ($i = 0; $i < $cantidadPrivilegios; $i++) {

@@ -1,8 +1,8 @@
 <?php
 session_start();
-include_once('C:/AppServ/www/proyectoADS/compartido/indexGeneral.php');
+include_once('C:/AppServ/www/proyectoADS/compartido/panelPrincipalShow.php');
 
-class formDatosAlumno extends indexGeneral
+class formDatosAlumno extends panelPrincipalShow
 {
     public function formDatosAlumnoShow($docIdnt, $nombreCom, $id)
     {
@@ -17,7 +17,7 @@ class formDatosAlumno extends indexGeneral
         $horas_consumidas = $respuesta[0]['horas_consumidas'];
         $horas_pendientes = $respuesta[0]['horas_pendientes'];
 
-        $this->panelPrincipalShow('
+        $this->panelShow('
                 <form action="./getDatosDeAlumno.php" method="POST">
                     <div class="welcome-message" style="margin-top: 70px">
                         <h2>DATOS DE ALUMNO</h2>

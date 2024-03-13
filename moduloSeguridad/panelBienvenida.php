@@ -9,22 +9,20 @@ class panelBienvenida extends formulario
         session_start();
 
         ?>
-        <?php
-          
-        include_once("C:/AppServ/www/proyectoADS/compartido/indexGeneral.php");
-        $objPanel = new indexGeneral();
-        $objPanel->panelPrincipalShow('
+                <?php
+
+                include_once("C:/AppServ/www/proyectoADS/compartido/panelPrincipalShow.php");
+                $objPanel = new panelPrincipalShow();
+                $objPanel->panelShow('
             <div class="welcome-message" style="margin-top: 70px">
                 <h2>Bienvenido!!!!</h2>
                 <p>Hola ' . $_SESSION['login'] . ', bienvenido al panel principal</p>
             </div>
         ');
-        ?>
+                ?>
 
-        <?php
-        $this->piePaginaShow();
+                <?php
+                $this->piePaginaShow();
     }
 }
 ?>
-
-

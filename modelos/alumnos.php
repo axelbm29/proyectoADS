@@ -53,7 +53,7 @@ class alumnos extends conexion
         }
     }
 
-    public function actualizarAlumno($id_alumno, $nombre_completo, $dni, $nivel_baile, $celular, $correo, $cumpleanos)
+    public function actualizarAlumnoPorId($id_alumno, $nombre_completo, $dni, $nivel_baile, $celular, $correo, $cumpleanos)
     {
         $this->conectar();
         $SQL = "UPDATE alumno 
@@ -65,6 +65,26 @@ class alumnos extends conexion
                     cumpleanos = '$cumpleanos'
                 WHERE id_alumno = $id_alumno;";
         $resultado = mysql_query($SQL);
+        $this->desConectar();
+
+        return $resultado;
+    }
+
+    public function actualizarAlumno($nombre, $dni, $celular, $correo, $cumpleanos, $nivelBaile, $idHorario)
+    {
+        $this->conectar();
+
+        $SQL = "UPDATE alumno
+                    SET nombre_completo = '$nombre',
+                        celular = '$celular',
+                        correo = '$correo',
+                        cumpleanos = '$cumpleanos',
+                        nivel_baile = '$nivelBaile',
+                        id_horario = '$idHorario'
+                    WHERE dni = '$dni'";
+
+        $resultado = mysql_query($SQL);
+
         $this->desConectar();
 
         return $resultado;

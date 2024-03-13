@@ -1,12 +1,12 @@
 <?php
 session_start();
-include_once('C:/AppServ/www/proyectoADS/compartido/indexGeneral.php');
+include_once('C:/AppServ/www/proyectoADS/compartido/panelPrincipalShow.php');
 
-class formRegistrarAsistencia extends indexGeneral
+class formRegistrarAsistencia extends panelPrincipalShow
 {
     public function formRegistrarAsistenciaShow()
     {
-        $this->panelPrincipalShow('
+        $this->panelShow('
             <form action="./getDatosDeAlumno.php" method="POST">
                 <div class="welcome-message" style="margin-top: 70px">
                     <h2>REGISTRAR ASISTENCIA</h2>

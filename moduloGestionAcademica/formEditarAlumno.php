@@ -1,11 +1,11 @@
 <?
 session_start();
-include_once('C:/AppServ/www/proyectoADS/compartido/indexGeneral.php');
-class formEditarAlumno extends indexGeneral
+include_once('C:/AppServ/www/proyectoADS/compartido/panelPrincipalShow.php');
+class formEditarAlumno extends panelPrincipalShow
 {
     public function formEditarAlumnoShow($id_alumno, $nombre_completo, $dni, $nivel_baile, $celular, $correo, $cumpleanos)
     {
-        $this->panelPrincipalShow('
+        $this->panelShow('
                 <form action="./getGestionarAlumnos.php" method="post">
                     <input type="hidden" name="id_alumno" value="' . $id_alumno . '">
                     <div class="mb-3">

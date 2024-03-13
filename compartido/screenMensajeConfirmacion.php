@@ -1,12 +1,12 @@
 <?php
 session_start();
-include_once('C:/AppServ/www/proyectoADS/compartido/indexGeneral.php');
+include_once('C:/AppServ/www/proyectoADS/compartido/panelPrincipalShow.php');
 
-class screenMensajeConfirmacion extends indexGeneral
+class screenMensajeConfirmacion extends panelPrincipalShow
 {
     public function screenMensajeConfirmacionShow($id_alumno, $nombre_completo)
     {
-        $this->panelPrincipalShow('
+        $this->panelShow('
             <div class="welcome-message" style="margin-top: 70px">
                 <div class="row">
                     <div class="col-12">

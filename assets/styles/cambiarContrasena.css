@@ -1,0 +1,56 @@
+body {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+  }
+  
+  .wrapper {
+    max-width: 400px;
+    margin: 10vh auto;
+    background-color: #4e5b92;
+    height: 65vh;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+  }
+  .title,
+  .subtitle {
+    text-align: center;
+  }
+  .title {
+    font-size: 50px;
+    line-height: 50px;
+  }
+  .subtitle {
+    font-size: 25px;
+    font-weight: 200;
+    font-style: italic;
+  }
+  .formulario {
+    text-align: center;
+  }
+  input {
+    width: 300px;
+    padding: 15px;
+  }
+  
+  .form-check{
+    text-align: left !important;
+  }
+  
+  a {
+    color: bisque;
+  }
+  
+  .btn-next {
+    font-size: 18px;
+    border: 1px solid #fff;
+    margin-bottom: 25px;
+  }
+  .btn-next:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid #ffffff;
+    color: #fff;
+  }
